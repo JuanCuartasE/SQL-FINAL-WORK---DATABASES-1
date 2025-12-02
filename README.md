@@ -2,19 +2,26 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Simulador de Consultas SQL — Jardinería
 
-This contains everything you need to run your app locally.
+Este proyecto es una aplicación web interactiva que permite ejecutar consultas SQL sobre una base de datos de simulación llamada **jardineria**. Está diseñado como herramienta de aprendizaje para reforzar conceptos de **Bases de Datos I**, tales como:
 
-View your app in AI Studio: https://ai.studio/apps/drive/19whJ8EimMfyV19RY2xdffz9UwHgokUY7
+- Modelo entidad–relación  
+- Creación y normalización de tablas
+- Llaves primarias y foráneas
+- Consultas básicas y multitabla
+- Subconsultas, agregación y funciones SQL
 
-## Run Locally
+La aplicación incluye el script completo de la base de datos, datos iniciales y un entorno visual para practicar diferentes consultas SQL.
 
-**Prerequisites:**  Node.js
+---
 
+## 🚀 Ejecutar el proyecto localmente
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### **Requisitos previos**
+- Node.js instalado en tu equipo
+
+### **Instalación**
+
+```bash
+npm install
