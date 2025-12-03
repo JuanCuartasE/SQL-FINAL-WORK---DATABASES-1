@@ -1,23 +1,23 @@
-import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/SQL-FINAL-WORK---DATABASES-1/', // 👈 ESTA ES LA LÍNEA CLAVE
-    server: {
-      port: 3000,
-      host: '0.0.0.0',
-    },
+    base: '/SQL-FINAL-WORK---DATABASES-1/',
     plugins: [react()],
-    define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
+      ssr: false,
+      rollupOptions: {
+        input: 'index.html'
+      }
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(__dirname, 'src')
       }
     }
   };
